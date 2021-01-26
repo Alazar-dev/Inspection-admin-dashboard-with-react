@@ -7,6 +7,8 @@ import SearchIcon from '@material-ui/icons/Search';
 import Typography from '@material-ui/core/Typography';
 import {IconButton} from "@material-ui/core";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import Navigation from '../components/pages/Navigation'
+import '../components/pages/Navigation.css'
 
 const styles = ({ spacing, transitions, breakpoints, palette, shape }) => ({
     header: {
@@ -73,7 +75,8 @@ const PrivateHeader = ({ classes }) => {
     return (
         <>
             <Typography noWrap color={'textSecondary'} className={classes.header}>
-                Vehicle Inspection
+                <span className="hello">Vehicle Inspection</span>
+                <Navigation />
             </Typography>
             <div className={classes.grow} />
             <div className={classes.search}>

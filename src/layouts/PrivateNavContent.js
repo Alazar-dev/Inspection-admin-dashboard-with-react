@@ -17,11 +17,6 @@ const menus = [
         url: '/dashboard',
     },
     {
-        label: 'Settings',
-        icon: <SettingsIcon />,
-        url: '/settings',
-    },
-    {
         label: 'Drivers',
         icon: <AccountBoxIcon />,
         url:'/drivers'
@@ -30,6 +25,11 @@ const menus = [
         label: 'Vehicles',
         icon: <DriveEtaTwoToneIcon />,
         url: '/vehicles' 
+    },
+        {
+        label: 'Settings',
+        icon: <SettingsIcon />,
+        url: '/settings',
     }
 ];
 

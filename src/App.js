@@ -1,11 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
-import LoginPage from "./pages/auth/Login";
+import LoginPage from "./components/pages/auth/Login";
 import PrivateLayout from "./layouts/PrivateLayout";
-import DashboardPage from "./pages/Dashboard";
-import SettingsPage from "./pages/Settings";
-import DriversPage from "./pages/Drivers";
-import VehiclesPage from "./pages/Vehicles"
+import DashboardPage from "./components/Dashboard";
+import SettingsPage from "./components/Settings";
+import DriversPage from "./components/Drivers";
+import VehiclesPage from "./components/Vehicles"
+
+import User from './components/pages/User';
+import Inspect from './components/pages/Inspect';
 
 function PrivateRoute({ children, ...rest }) {
   return (
@@ -34,17 +37,23 @@ function App() {
               <Route exact path="/">
                   <LoginPage />
               </Route>
+              <Route exact path="/User">
+                <User />
+              </Route>
+              <Route exact path="/Inspect">
+                <Inspect />
+              </Route>
               <PrivateRoute path="/dashboard">
                   <DashboardPage />
-              </PrivateRoute>
-              <PrivateRoute path="/settings">
-                  <SettingsPage />
               </PrivateRoute>
               <PrivateRoute path="/drivers">
                   <DriversPage />
               </PrivateRoute>
               <PrivateRoute path="/vehicles">
                   <VehiclesPage />
+              </PrivateRoute>
+              <PrivateRoute path="/settings">
+                  <SettingsPage />
               </PrivateRoute>
               
           </Switch>

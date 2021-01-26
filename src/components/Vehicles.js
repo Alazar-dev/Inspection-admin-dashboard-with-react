@@ -8,7 +8,10 @@ class Vehicles extends Component {
 
     render(){
         return (
-            <div>Hello Travor Noah</div>
+            
+            <div>
+                Hello Travor Noah
+            </div>
         )
     }
 }
