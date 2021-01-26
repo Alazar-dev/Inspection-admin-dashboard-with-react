@@ -17,7 +17,12 @@ class User extends Component {
         return (
             <div>
                 {this.state.loading ? (<div>Loading...</div>): 
-                    (<div>{this.state.person.name.first}</div>)}
+                    <div>
+                        <div>{this.state.person.name.first}</div>
+                        <div>{this.state.person.name.last}</div>
+                        <img src={this.state.person.picture.large} alt={this.state.person.name.first + "'s name"}/>
+                    </div>
+                    }
             </div>
         )
     }
