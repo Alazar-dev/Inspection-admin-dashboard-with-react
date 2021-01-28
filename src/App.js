@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import LoginPage from "./components/pages/auth/Login";
 import PrivateLayout from "./layouts/PrivateLayout";
-import DashboardPage from "./components/Dashboard";
-import SettingsPage from "./components/Settings";
-import DriversPage from "./components/Drivers";
-import VehiclesPage from "./components/Vehicles"
+import DashboardPage from "./components/pages/Dashboard";
+import SettingsPage from "./components/pages/Settings";
+import DriversPage from "./components/pages/Drivers";
+import VehiclesPage from "./components/pages/Vehicles"
 
 import User from './components/pages/User';
 import Inspect from './components/pages/Inspect';

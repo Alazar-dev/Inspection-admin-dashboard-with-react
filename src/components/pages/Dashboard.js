@@ -1,6 +1,5 @@
 import  React, { Component } from 'react';
-// import Typography from "@material-ui/core/Typography";
-
+import Footer from '../Footer'
 class DashboardPage extends Component {
     constructor(props){
         super(props);
@@ -9,7 +8,10 @@ class DashboardPage extends Component {
 
     render() {
         return (
-            <div>Hellot Traba</div>
+            <div>
+                <h2>Hellot Traba</h2>
+                <Footer />
+            </div>
         )
     }
 }

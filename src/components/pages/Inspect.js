@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
+import Form from '../Forms/Form';
  
 class User extends Component {
 
 
     render() {
         return(
-            <div>
-                <form action="">
-                    <label htmlFor="name">Name</label>
-                    <input type="text"/>
-                </form>
+            <div className="container">
+                <div className="row">
+                    <h1 className="text-center">Test Vehicle</h1>
+                </div>
+                <Form />
             </div>
         )
     }
