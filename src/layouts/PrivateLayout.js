@@ -48,7 +48,7 @@ const PrivateLayout = ({children}) => {
                         </Header>
 
                         <DrawerSidebar sidebarId="primarySidebar">
-                            <SidebarContent>
+                            <SidebarContent style={{ backgroundColor: "#16A1CA" }}>
                                 <PrivateNavHeader collapsed={sidebar.primarySidebar.collapsed} />
                                 <PrivateNavContent/>
                             </SidebarContent>

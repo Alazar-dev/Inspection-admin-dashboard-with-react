@@ -14,11 +14,23 @@ function LoginPage() {
         history.replace(from);
     };
 
+    
+
     return (
         <div className="Login">
             <header className="Login-header">
-                This is the Login Page <br/><br/>
-                <Button color="inherit" variant="outlined" onClick={handleClick}>
+                <div className="mb-5" style={{ marginLeft: "9rem" }}>
+                    <h2 className="mb-5">Vehicle Inspection System</h2>
+                </div>
+                <div>
+                    <label>Full Name</label>
+                    <input className="form-input ml-5" type="text" />
+                </div>
+                <div className="mt-2">
+                    <label>Password</label>
+                    <input className="form-input ml-5" type="password"/>
+                </div>
+                <Button style={{ marginLeft: "28rem" }} className="mt-3" color="inherit" variant="outlined" onClick={handleClick}>
                     Login
                 </Button>
             </header>

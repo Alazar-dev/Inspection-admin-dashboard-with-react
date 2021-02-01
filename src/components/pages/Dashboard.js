@@ -1,5 +1,5 @@
-import  React, { Component } from 'react';
-import Footer from '../Footer'
+import  React, {Component} from 'react';
+
 class DashboardPage extends Component {
     constructor(props){
         super(props);
@@ -9,8 +9,8 @@ class DashboardPage extends Component {
     render() {
         return (
             <div>
-                <h2>Hellot Traba</h2>
-                <Footer />
+                <h2>Welcome! </h2>
+                {/* <Footer /> */}
             </div>
         )
     }

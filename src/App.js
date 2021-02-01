@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+
 import LoginPage from "./components/pages/auth/Login";
 import PrivateLayout from "./layouts/PrivateLayout";
 import DashboardPage from "./components/pages/Dashboard";
@@ -37,12 +38,12 @@ function App() {
               <Route exact path="/">
                   <LoginPage />
               </Route>
-              <Route exact path="/User">
+              <PrivateRoute exact path="/User">
                 <User />
-              </Route>
-              <Route exact path="/Inspect">
+              </PrivateRoute>
+              <PrivateRoute exact path="/Inspect">
                 <Inspect />
-              </Route>
+              </PrivateRoute>
               <PrivateRoute path="/dashboard">
                   <DashboardPage />
               </PrivateRoute>

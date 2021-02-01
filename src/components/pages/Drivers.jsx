@@ -97,14 +97,14 @@ class Drivers extends Component{
          <div className="container">
             <div className="row">
                 <div className="col col-sm-6">
-                    <h2 className="mt-5">Registered Drivers</h2>
+                    {/* <h2 className="mt-5">Registered Drivers</h2>
                     {this.state.loading || !this.state.person ? (<div>Loading...</div>) : 
                         (<div>
                             <div>{this.state.person.id}</div>
                             <div>{this.state.person.name.last}</div>
                             <img src={this.state.person.picture.large} alt={this.state.person.name.first + "'s image"} />
                         </div>)
-                    }
+                    } */}
                     
                     <h2>Register Drivers</h2>
                     <form onSubmit={this.handleSubmit}>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Vehicles extends Component {
     constructor(props){
@@ -61,6 +62,16 @@ class Vehicles extends Component {
         })
     }
 
+    handleSubmit = e => {
+        e.preventDefault();
+        axios.post('http://192.168.1.105:8080/api/vehicle', this.state)
+        .then(response => {
+            console.log(response)
+        }).catch(error => {
+            console.log(error)
+        })
+    }
+
     render(){
         return (
             
@@ -68,14 +79,14 @@ class Vehicles extends Component {
                 <div className="row">
 
                     <div className="col-sm-6">
-                    <h2>Registered Vehicles</h2>
+                    {/* <h2>Registered Vehicles</h2>
                     {this.state.loading || !this.state.person ? (<div>Loading...</div>) :
                         (<div>
                             <div>{this.state.person.id}</div>
                             <div>{this.state.person.name.last}</div>
                             <img src={this.state.person.picture.large} alt={this.state.person.name.first + "'s image"} />
                         </div>)
-                    }
+                    } */}
 
                         <h2>Vehicle Registration</h2>
                         <form onSubmit={this.handleSubmit}>
@@ -101,8 +112,9 @@ class Vehicles extends Component {
                             </div>
                             <div>
                                 <label>Owner</label>
-                                <input className="form-control" type="text" value={this.state.owner_name} onchange={this.handleownerName}/>
-                            </div>
+                                <input className="form-control" type="text" value={this.state.owner_name} onChange={this.handleownerName}/>
+                            </div> 
+                            <button className="mt-5 btn-primary">Register</button>
                         </form>
                     </div>
                 </div>

@@ -6,20 +6,20 @@ import Divider from "@material-ui/core/Divider";
 
 const PrivateNavHeader = ({ collapsed }) => (
     <>
-        <div style={{ padding: collapsed ? 8 : 16, transition: "0.3s" }}>
+        <div style={{ padding: collapsed ? 8 : 16, transition: "0.3s", backgroundColor: "#17A2B8" }}>
             <Avatar
                 style={{
                     width: collapsed ? 48 : 60,
                     height: collapsed ? 48 : 60,
-                    transition: "0.3s"
+                    transition: "0.3s",
                 }}
             />
             <div style={{ paddingBottom: 16 }} />
             <Typography variant={"h6"} noWrap>
-                Admin Dashboard
+                Vehicle Inspection
             </Typography>
             <Typography color={"textSecondary"} noWrap gutterBottom>
-                admin@gmail.com
+                inspection@gmail.com
             </Typography>
         </div>
         <Divider />
