@@ -88,6 +88,118 @@ class Vehicles extends Component {
                         </div>)
                     } */}
 
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Registration Number</th>
+                                <th scope="col">Maker</th>
+                                <th>Model</th>
+                                <th>Year</th>
+                                <th>Color</th>
+                                <th>Owner</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>reg_123</td>
+                                <td>toyota</td>
+                                <td>Sport</td>
+                                <td>2000</td>
+                                <td>red</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>reg_456</td>
+                                <td>toyota</td>
+                                <td>Automobile</td>
+                                <td>2000</td>
+                                <td>red</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>reg_943</td>
+                                <td>witneyhosten@twitter</td>
+                                <td>Automobile</td>
+                                <td>2000</td>
+                                <td>silver</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>reg_234</td>
+                                <td>validenode@twitter</td>
+                                <td>Automobile</td>
+                                <td>2000</td>
+                                <td>silver</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>reg_087</td>
+                                <td>toyota</td>
+                                <td>taxi</td>
+                                <td>2000</td>
+                                <td>silver</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>reg_002</td>
+                                <td>jtoyota</td>
+                                <td>Automobile</td>
+                                <td>2000</td>
+                                <td>blue</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>reg_432</td>
+                                <td>suzuki</td>
+                                <td>Automobile</td>
+                                <td>2000</td>
+                                <td>silver</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>reg_345</td>
+                                <td>suzuki</td>
+                                <td>taxi</td>
+                                <td>2004</td>
+                                <td>green</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>reg_375</td>
+                                <td>haundai</td>
+                                <td>Automobile</td>
+                                <td>2019</td>
+                                <td>blue</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>reg_009</td>
+                                <td>jamiegrace@twitter</td>
+                                <td>2004</td>
+                                <td>silver</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>reg_102</td>
+                                <td>haundai</td>
+                                <td>taxi</td>
+                                <td>2000</td>
+                                <td>red</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td>reg_103</td>
+                                <td>toyota</td>
+                                <td>taxi</td>
+                                <td>2010</td>
+                                <td>red</td>
+                              </tr>
+                            </tbody>
+                        </table>
+
+                        
                         <h2>Vehicle Registration</h2>
                         <form onSubmit={this.handleSubmit}>
                             <div>

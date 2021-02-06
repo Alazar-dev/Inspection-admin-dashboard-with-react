@@ -56,7 +56,7 @@ const PrivateLayout = ({children}) => {
                         </DrawerSidebar>
 
                         <Content>
-                            <PrivateContent>{children}</PrivateContent>
+                            <PrivateContent style={{ backgroundColor: 'red', width: 1000 }}>{children}</PrivateContent>
                         </Content>
 
                         <Footer>
