@@ -26,7 +26,7 @@ const Chart = () => {
     },[])
     return ( 
         <div>
-            <Bar height='50pxpx' width='50px' data={ChartData}/>
+            <Bar width='1000px' height='400px' data={ChartData}/>
         </div>
     );
 }
