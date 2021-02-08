@@ -38,12 +38,12 @@ const [ error, setError ] = useState(null) ;
 const [ isLoaded, setIsLoaded ] = useState(false);
 const [ users, setUsers ] = useState([]);
 useEffect(() => {
-  fetch('http://192.168.1.118:8080/api/user')
-  .then(res => res.json)
+  fetch('http://192.168.1.103:8080/api/user')
+  .then(res => res.json())
   .then(
     (result) => {
       setIsLoaded(true)
-      setUsers(true)
+      setUsers(result)
     },
     (error) => {
       setIsLoaded(true)
@@ -57,12 +57,6 @@ if (!isLoaded) {
 } else if (error) {
   <div>{error.message}</div>
 } else {
-  console.log(users.length + 'us')
-  console.log(users.length)
-  // return <div></div>
-}
-
-
   return (
     <Card className={classes.root}>
       <CardContent>
@@ -70,15 +64,17 @@ if (!isLoaded) {
           Users
         </Typography>
         <Typography className={classes.num} color="textPrimary">
-          {setUsers.length}
+          {users.length}
         </Typography>
         <Typography className={classes.text} variant="body2" component="p">
           Users
         </Typography>
       </CardContent>
-
     </Card>
-  );
+  )
+}
+
+
 }
 
 export default CardUser;

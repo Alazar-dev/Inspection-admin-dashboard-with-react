@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Grid } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles';
 
 import CardUser from '../Cards/CardUser';
 import CardDriver from "../Cards/CardDriver";
@@ -17,6 +17,9 @@ const useStyles = makeStyles(() => ({
         width: '100%',
         margin: '0px'
     },
+    tobe: {
+        height: 20
+    }
 
 }))
 const DashboardPage = () => {
@@ -28,7 +31,7 @@ const DashboardPage = () => {
     const [ users, setUser] = useState([])
 
     useEffect(() => {
-        fetch('http://192.168.1.118:8080/api/user')
+        fetch('http://192.168.1.103:8080/api/user')
         .then(res => res.json())
         .then(
             (result) => {
@@ -66,8 +69,11 @@ const DashboardPage = () => {
                     <Grid item xs={3}>
                         <CardVehicle />       
                     </Grid>
+                    <Grid item className={classes.tobe} justify="center"xs={12}>
+                        <Chart />    
+                    </Grid>
+                
                 </Grid>
-                <Chart />
             </div>
 
         );

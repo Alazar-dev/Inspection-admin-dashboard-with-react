@@ -56,7 +56,6 @@ function App() {
               <PrivateRoute path="/settings">
                   <SettingsPage />
               </PrivateRoute>
-              
           </Switch>
       </BrowserRouter>
   );

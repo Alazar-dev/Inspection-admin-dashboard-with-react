@@ -6,6 +6,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import DashboardIcon from '@material-ui/icons/Dashboard';
+import PersonIcon from '@material-ui/icons/Person';
 import SettingsIcon from '@material-ui/icons/Settings';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import DriveEtaTwoToneIcon from '@material-ui/icons/DriveEtaTwoTone';
@@ -30,6 +31,11 @@ const menus = [
         label: 'Settings',
         icon: <SettingsIcon />,
         url: '/settings',
+    },
+    {
+        label: 'Users',
+        icon: <PersonIcon />,
+        url: '/User'
     }
 ];
 

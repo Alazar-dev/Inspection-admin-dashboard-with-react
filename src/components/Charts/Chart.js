@@ -1,4 +1,4 @@
-import { Line } from 'react-chartjs-2';
+import { Bar } from 'react-chartjs-2';
 import { useState, useEffect } from 'react'
 
 const Chart = () => {
@@ -6,7 +6,7 @@ const Chart = () => {
 
     const chart = () => {
         setChartData({
-            labels: ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'],
+            labels: ['users', 'drivers', 'vehicles', 'thursday', 'friday'],
             datasets: [
                 {
                     label: 'level of thickness',
@@ -14,7 +14,7 @@ const Chart = () => {
                     backgroundColor: [ 
                       'rgba(75, 192, 192, 0.6'
                 ],
-                borderWidth: 4
+                borderWidth: 5
                 }
 
             ]
@@ -27,7 +27,7 @@ const Chart = () => {
     return ( 
         <div className="cart">
             <div>
-                <Line data={ChartData}/>
+                <Bar height={100} data={ChartData}/>
             </div>
         </div>
      );
