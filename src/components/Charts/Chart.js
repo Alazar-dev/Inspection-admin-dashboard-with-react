@@ -25,12 +25,10 @@ const Chart = () => {
         chart()
     },[])
     return ( 
-        <div className="cart">
-            <div>
-                <Bar height={100} data={ChartData}/>
-            </div>
+        <div>
+            <Bar height='50pxpx' width='50px' data={ChartData}/>
         </div>
-     );
+    );
 }
  
 

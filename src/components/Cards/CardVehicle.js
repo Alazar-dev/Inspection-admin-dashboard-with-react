@@ -1,4 +1,5 @@
 import { makeStyles } from '@material-ui/core/styles';
+import { useState, useEffect } from 'react';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -29,22 +30,46 @@ const useStyles = makeStyles({
 const CardVehicle = () => {
   const classes = useStyles();
 
-  return (
-    <Card className={classes.root}>
-      <CardContent>
-        <Typography>
-          Vehicles
-        </Typography>
-        <Typography className={classes.num} variant="body2" component="p">
-          82
-        </Typography>
-        <Typography className={classes.text}>
-          Vehicles
-        </Typography>
-      </CardContent>
+  const [ error, setError ] = useState(null);
+  const [ isLoaded, setIsLoaded ] = useState(false);
+  const [ vehicles, setVehicles ] = useState([])
 
-    </Card>
-  );
+  useEffect(() => {
+    fetch('http://192.168.1.112:8080/api/driver')
+    .then(res => res.json())
+    .then(
+      (result) => {
+        setIsLoaded(true)
+        setVehicles(result)
+      },
+      (error) => {
+        setIsLoaded(true)
+        setError(error)
+      }
+    )
+  }, [])
+
+  if (!isLoaded) {
+    return <div>Loading...</div>
+  } else if (error){
+    <div>{error.message}</div>
+  } else {
+    return (
+      <Card className={classes.root}>
+        <CardContent>
+          <Typography>
+            Vehicles
+          </Typography>
+          <Typography className={classes.num} variant="body2" component="p">
+            {vehicles.length}
+          </Typography>
+          <Typography className={classes.text}>
+            Vehicles
+          </Typography>
+        </CardContent>
+      </Card>
+    )
+  }
 }
 
 export default CardVehicle;

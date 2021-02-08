@@ -38,7 +38,7 @@ const [ error, setError ] = useState(null) ;
 const [ isLoaded, setIsLoaded ] = useState(false);
 const [ users, setUsers ] = useState([]);
 useEffect(() => {
-  fetch('http://192.168.1.103:8080/api/user')
+  fetch('http://192.168.1.112:8080/api/user')
   .then(res => res.json())
   .then(
     (result) => {
