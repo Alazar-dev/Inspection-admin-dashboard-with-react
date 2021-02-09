@@ -47,7 +47,7 @@ class User extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        axios.post('http://192.168.1.112:8080/api/inspection-parameter', this.state)
+        axios.post('https://mighty-earth-67652.herokuapp.com/api/inspection-parameter', this.state)
         .then(response => {
             console.log(response)
         }).catch(error => {

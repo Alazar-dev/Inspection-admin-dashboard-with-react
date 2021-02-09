@@ -64,7 +64,7 @@ class Vehicles extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        axios.post('http://192.168.1.105:8080/api/vehicle', this.state)
+        axios.post('https://mighty-earth-67652.herokuapp.com/api/vehicle', this.state)
         .then(response => {
             console.log(response)
         }).catch(error => {

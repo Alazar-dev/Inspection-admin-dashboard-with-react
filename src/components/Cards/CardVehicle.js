@@ -35,7 +35,7 @@ const CardVehicle = () => {
   const [ vehicles, setVehicles ] = useState([])
 
   useEffect(() => {
-    fetch('http://192.168.1.112:8080/api/driver')
+    fetch('https://mighty-earth-67652.herokuapp.com/api/vehicle')
     .then(res => res.json())
     .then(
       (result) => {

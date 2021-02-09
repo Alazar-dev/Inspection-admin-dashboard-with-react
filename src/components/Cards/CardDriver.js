@@ -35,7 +35,7 @@ const CardDriver = () => {
   const [ drivers, setDrivers ] = useState([])
 
   useEffect(() => {
-    fetch('http://192.168.1.112:8080/api/driver')
+    fetch('https://mighty-earth-67652.herokuapp.com/api/driver')
     .then(res => res.json())
     .then(
       (result) => {
@@ -57,13 +57,13 @@ const CardDriver = () => {
     return (
     <Card className={classes.root}>
       <CardContent>
-        <Typography className={classes.text}>
+        <Typography>
           Drivers
         </Typography>
         <Typography className={classes.num} color="textPrimary">
           {drivers.length}
         </Typography>
-        <Typography variant="body2" component="p">
+        <Typography className={classes.text} variant="body2" component="p">
           Drivers
         </Typography>
       </CardContent>

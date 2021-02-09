@@ -8,7 +8,7 @@ import SettingsPage from "./components/pages/Settings";
 import DriversPage from "./components/pages/Drivers";
 import VehiclesPage from "./components/pages/Vehicles"
 
-import User from './components/pages/User';
+import User from './components/pages/Users';
 import Inspect from './components/pages/Inspect';
 
 function PrivateRoute({ children, ...rest }) {
