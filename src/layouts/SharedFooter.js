@@ -4,8 +4,8 @@ import Link from '@material-ui/core/Link';
 
 const SharedFooter = () => (
     <div style={{ maxWidth: 700, margin: 'auto', textAlign: 'center' }}>
-        <Typography variant="caption" align={'center'}>
-            {'Copyright © '}
+        {/* <Typography variant="caption" align={'center'}> */}
+            {/* {'Copyright © '}
             <Link
                 color="inherit"
                 href="http://www.my-company.com"
@@ -14,7 +14,7 @@ const SharedFooter = () => (
                 My Company
             </Link>{' '}
             {new Date().getFullYear()}
-        </Typography>
+        </Typography> */}
     </div>
 );
 

@@ -8,7 +8,6 @@ import Typography from '@material-ui/core/Typography';
 import {IconButton} from "@material-ui/core";
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Navigation from '../components/pages/Navigation'
-import '../components/pages/Navigation.css'
 
 const styles = ({ spacing, transitions, breakpoints, palette, shape }) => ({
     header: {

@@ -11,11 +11,7 @@ const useStyles = makeStyles(() => ({
     grid: {
         width: '100%',
         margin: '0px'
-    },
-    tobe: {
-        height: 20
     }
-
 }))
 const DashboardPage = () => {
 
@@ -33,7 +29,7 @@ const DashboardPage = () => {
                 <Grid item xs={3}>
                     <CardVehicle />       
                 </Grid>
-                <Grid item className={classes.tobe} justify="center"xs={12}>
+                <Grid item justify="center"xs={12}>
                     <Chart />    
                 </Grid>
             </Grid>
